@@ -1,0 +1,51 @@
+@font-face {
+    font-family: SF-Pro;
+    src: url(font/SF-Pro.ttf);
+  }
+  
+  .messageContainer {
+    position: fixed;
+    width: 50vw;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-anchor: auto;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    font-size: 14pt;
+    padding: 0;
+    mix-blend-mode: multiply;
+    /* border: 10px solid red; */
+  }
+  
+  @keyframes message {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) scale(0);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0px) scale(1);
+    }
+  }
+  
+  /* .left-speech-bubble span,
+  .left-speech-bubble p 
+  { */
+  .messageBubble{
+    position: relative;
+    width: fit-content;
+    max-width: 100%;
+    height: auto;
+    padding: 7pt;
+    margin: 14pt;
+    border-radius: 2.5vw 3vw 3vw 1vw;
+    color: white;
+    display: block;
+    word-break: break-word;
+    animation: message 0.5s;
+    transform-origin: left bottom;
+    border: 1px dotted white;
+    filter: drop-shadow(0px 0px 2px white);
+    background-color: blue;
+  }
